@@ -37,8 +37,8 @@
             this.btnRegistrirajSe = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbRegistracija = new System.Windows.Forms.GroupBox();
-            this.tbIme = new System.Windows.Forms.TextBox();
             this.lbPrezime = new System.Windows.Forms.Label();
+            this.tbIme = new System.Windows.Forms.TextBox();
             this.lbIme = new System.Windows.Forms.Label();
             this.gbRegistracija.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +100,7 @@
             this.btnRegistrirajSe.TabIndex = 12;
             this.btnRegistrirajSe.Text = "Registriraj se";
             this.btnRegistrirajSe.UseVisualStyleBackColor = false;
+            this.btnRegistrirajSe.Click += new System.EventHandler(this.btnRegistrirajSe_Click);
             this.btnRegistrirajSe.MouseEnter += new System.EventHandler(this.btnRegistrirajSe_MouseEnter);
             this.btnRegistrirajSe.MouseLeave += new System.EventHandler(this.btnRegistrirajSe_MouseLeave);
             // 
@@ -122,15 +123,6 @@
             this.gbRegistracija.TabStop = false;
             this.gbRegistracija.Text = "Registracija";
             // 
-            // tbIme
-            // 
-            this.tbIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbIme.Location = new System.Drawing.Point(354, 38);
-            this.tbIme.Multiline = true;
-            this.tbIme.Name = "tbIme";
-            this.tbIme.Size = new System.Drawing.Size(324, 44);
-            this.tbIme.TabIndex = 10;
-            // 
             // lbPrezime
             // 
             this.lbPrezime.AutoSize = true;
@@ -140,6 +132,15 @@
             this.lbPrezime.Size = new System.Drawing.Size(116, 29);
             this.lbPrezime.TabIndex = 9;
             this.lbPrezime.Text = "Prezime:";
+            // 
+            // tbIme
+            // 
+            this.tbIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbIme.Location = new System.Drawing.Point(354, 38);
+            this.tbIme.Multiline = true;
+            this.tbIme.Name = "tbIme";
+            this.tbIme.Size = new System.Drawing.Size(324, 44);
+            this.tbIme.TabIndex = 10;
             // 
             // lbIme
             // 
