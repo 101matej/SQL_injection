@@ -43,7 +43,7 @@
             this.lbKorisnickoIme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbKorisnickoIme.AutoSize = true;
             this.lbKorisnickoIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbKorisnickoIme.Location = new System.Drawing.Point(122, 48);
+            this.lbKorisnickoIme.Location = new System.Drawing.Point(123, 50);
             this.lbKorisnickoIme.Name = "lbKorisnickoIme";
             this.lbKorisnickoIme.Size = new System.Drawing.Size(193, 29);
             this.lbKorisnickoIme.TabIndex = 0;
@@ -54,7 +54,7 @@
             this.lbLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbLozinka.AutoSize = true;
             this.lbLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbLozinka.Location = new System.Drawing.Point(122, 105);
+            this.lbLozinka.Location = new System.Drawing.Point(123, 107);
             this.lbLozinka.Name = "lbLozinka";
             this.lbLozinka.Size = new System.Drawing.Size(109, 29);
             this.lbLozinka.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             this.tbKorisnickoIme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbKorisnickoIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbKorisnickoIme.Location = new System.Drawing.Point(349, 33);
+            this.tbKorisnickoIme.Location = new System.Drawing.Point(350, 35);
             this.tbKorisnickoIme.Multiline = true;
             this.tbKorisnickoIme.Name = "tbKorisnickoIme";
             this.tbKorisnickoIme.Size = new System.Drawing.Size(324, 44);
@@ -74,7 +74,7 @@
             // 
             this.tbLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbLozinka.Location = new System.Drawing.Point(349, 90);
+            this.tbLozinka.Location = new System.Drawing.Point(350, 92);
             this.tbLozinka.Multiline = true;
             this.tbLozinka.Name = "tbLozinka";
             this.tbLozinka.Size = new System.Drawing.Size(324, 44);
@@ -104,7 +104,7 @@
             this.gbPrijava.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gbPrijava.Location = new System.Drawing.Point(93, 26);
             this.gbPrijava.Name = "gbPrijava";
-            this.gbPrijava.Size = new System.Drawing.Size(798, 172);
+            this.gbPrijava.Size = new System.Drawing.Size(800, 175);
             this.gbPrijava.TabIndex = 5;
             this.gbPrijava.TabStop = false;
             this.gbPrijava.Text = "Prijava:";
