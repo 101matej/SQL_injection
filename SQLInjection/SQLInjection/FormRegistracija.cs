@@ -28,6 +28,8 @@ namespace SQLInjection
         {
             InitializeComponent();
             pozicioniraj();
+
+            tbLozinka.PasswordChar = '*';
         }
 
         private void pozicioniraj()
