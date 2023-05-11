@@ -28,6 +28,7 @@ namespace SQLInjection
             dgvKorisnici.ReadOnly = true;
             dgvKorisnici.AutoSize = true;
             prikaziKorisnike();
+            tbLozinka.PasswordChar = '*';
         }
 
         private void pozicioniraj()
