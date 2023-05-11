@@ -19,7 +19,6 @@ namespace SQLInjection
         private string lozinka;
         private string hashiranaLozinka;
         private string sol;
-        
         public FormPrijava()
         {
             InitializeComponent();
@@ -27,7 +26,7 @@ namespace SQLInjection
 
             dgvKorisnici.AutoGenerateColumns = true;
             dgvKorisnici.ReadOnly = true;
-            dgvKorisnici.AutoSize = true;  
+            dgvKorisnici.AutoSize = true;
             prikaziKorisnike();
         }
 
