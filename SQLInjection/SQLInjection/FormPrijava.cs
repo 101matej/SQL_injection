@@ -15,6 +15,10 @@ namespace SQLInjection
     public partial class FormPrijava : Form
     {
         MySqlConnection sqlConn = new MySqlConnection("server=localhost;user=root;password=baze2021;database=si");
+        private string korisnickoIme;
+        private string lozinka;
+        private string hashiranaLozinka;
+        private string sol;
         public FormPrijava()
         {
             InitializeComponent();
@@ -82,6 +86,80 @@ namespace SQLInjection
         private void btnPrijaviSe_MouseLeave(object sender, EventArgs e)
         {
             btnPrijaviSe.BackColor = SystemColors.MenuHighlight;
+        }
+
+        private void selectDB(string korisnickoIme)
+        {
+            sqlConn.Open();
+            hashiranaLozinka = "";
+            sol = "";
+            string sqlUpit = "SELECT * FROM korisnik WHERE korisnicko_ime = '" + korisnickoIme + "'";
+            MySqlCommand mySqlCmd = new MySqlCommand(sqlUpit, sqlConn);
+            MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader();
+
+            while (mySqlDataReader.Read())
+            {
+                hashiranaLozinka = mySqlDataReader["hashirana_lozinka"].ToString();
+                sol = mySqlDataReader["salt"].ToString();
+            }
+            sqlConn.Close();
+        }
+
+        private string hashirajLozinku(string posoljenaLozinka)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(posoljenaLozinka));
+
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+        private void ocistiPolja()
+        {
+            tbKorisnickoIme.Clear();
+            tbLozinka.Clear();
+        }
+
+        private int provjeriPolja()
+        {
+            if (string.IsNullOrEmpty(tbKorisnickoIme.Text) || string.IsNullOrEmpty(tbLozinka.Text))
+            {
+                MessageBox.Show("Potrebno je popuniti sva polja!");
+                return 0;
+            }
+            return 1;
+        }
+
+        private void provjeraLozinke()
+        {
+            lozinka = tbLozinka.Text;
+            lozinka = lozinka + sol;
+
+            if (hashiranaLozinka == hashirajLozinku(lozinka))
+            {
+                MessageBox.Show("Uspješna prijava!");
+                ocistiPolja();
+            }
+            else
+            {
+                MessageBox.Show("Pogrešna lozinka!");
+            }
+        }
+
+        private void btnPrijaviSe_Click(object sender, EventArgs e)
+        {
+            if (provjeriPolja() == 1)
+            {
+                korisnickoIme = tbKorisnickoIme.Text;
+                selectDB(korisnickoIme);
+                provjeraLozinke();
+            }
         }
     }
 }

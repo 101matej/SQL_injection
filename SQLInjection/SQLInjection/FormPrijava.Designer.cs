@@ -92,6 +92,7 @@
             this.btnPrijaviSe.TabIndex = 4;
             this.btnPrijaviSe.Text = "Prijavi se";
             this.btnPrijaviSe.UseVisualStyleBackColor = false;
+            this.btnPrijaviSe.Click += new System.EventHandler(this.btnPrijaviSe_Click);
             this.btnPrijaviSe.MouseEnter += new System.EventHandler(this.btnPrijaviSe_MouseEnter);
             this.btnPrijaviSe.MouseLeave += new System.EventHandler(this.btnPrijaviSe_MouseLeave);
             // 
