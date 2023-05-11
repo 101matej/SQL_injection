@@ -35,7 +35,9 @@
             this.tbLozinka = new System.Windows.Forms.TextBox();
             this.btnPrijaviSe = new System.Windows.Forms.Button();
             this.gbPrijava = new System.Windows.Forms.GroupBox();
+            this.dgvKorisnici = new System.Windows.Forms.DataGridView();
             this.gbPrijava.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
             // 
             // lbKorisnickoIme
@@ -90,6 +92,7 @@
             this.btnPrijaviSe.TabIndex = 4;
             this.btnPrijaviSe.Text = "Prijavi se";
             this.btnPrijaviSe.UseVisualStyleBackColor = false;
+            this.btnPrijaviSe.Click += new System.EventHandler(this.btnPrijaviSe_Click);
             this.btnPrijaviSe.MouseEnter += new System.EventHandler(this.btnPrijaviSe_MouseEnter);
             this.btnPrijaviSe.MouseLeave += new System.EventHandler(this.btnPrijaviSe_MouseLeave);
             // 
@@ -109,12 +112,23 @@
             this.gbPrijava.TabStop = false;
             this.gbPrijava.Text = "Prijava:";
             // 
+            // dgvKorisnici
+            // 
+            this.dgvKorisnici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKorisnici.Location = new System.Drawing.Point(653, 272);
+            this.dgvKorisnici.Name = "dgvKorisnici";
+            this.dgvKorisnici.RowHeadersWidth = 51;
+            this.dgvKorisnici.RowTemplate.Height = 24;
+            this.dgvKorisnici.Size = new System.Drawing.Size(240, 150);
+            this.dgvKorisnici.TabIndex = 6;
+            // 
             // FormPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(995, 621);
+            this.Controls.Add(this.dgvKorisnici);
             this.Controls.Add(this.gbPrijava);
             this.Controls.Add(this.btnPrijaviSe);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -124,6 +138,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.gbPrijava.ResumeLayout(false);
             this.gbPrijava.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +152,6 @@
         private System.Windows.Forms.TextBox tbLozinka;
         private System.Windows.Forms.Button btnPrijaviSe;
         private System.Windows.Forms.GroupBox gbPrijava;
+        private System.Windows.Forms.DataGridView dgvKorisnici;
     }
 }
