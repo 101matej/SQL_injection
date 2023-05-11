@@ -31,11 +31,6 @@ namespace SQLInjection
             int xG = (Screen.PrimaryScreen.WorkingArea.Width - gbPrijava.Width) / 2;
             int yG = (ClientSize.Height - gbPrijava.Height) / 2 + 100;
             gbPrijava.Location = new Point(xG, yG);
-
-            int xD = (Screen.PrimaryScreen.WorkingArea.Width - dgvKorisnici.Width) / 2;
-            int yD = (ClientSize.Height - dgvKorisnici.Height) / 2 -100;
-            dgvKorisnici.Location = new Point(xD, yD);
-
         }
 
         private void btnPrijaviSe_MouseEnter(object sender, EventArgs e)
