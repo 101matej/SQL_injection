@@ -34,8 +34,12 @@ namespace SQLInjection
         private void pozicioniraj()
         {
             int xP = (Screen.PrimaryScreen.WorkingArea.Width - btnPrijaviSe.Width) / 2;
-            int yP = (ClientSize.Height - btnPrijaviSe.Height) / 2 + 300;
+            int yP = (ClientSize.Height - btnPrijaviSe.Height) / 2 + 310;
             btnPrijaviSe.Location = new Point(xP, yP);
+
+            int xC = (Screen.PrimaryScreen.WorkingArea.Width - cbSql.Width) / 2;
+            int yC = (ClientSize.Height - cbSql.Height) / 2 + 200;
+            cbSql.Location = new Point(xC, yC);
 
             int xG = (Screen.PrimaryScreen.WorkingArea.Width - gbPrijava.Width) / 2;
             int yG = (ClientSize.Height - gbPrijava.Height) / 2 + 100;
@@ -161,11 +165,18 @@ namespace SQLInjection
 
         private void btnPrijaviSe_Click(object sender, EventArgs e)
         {
-            if (provjeriPolja() == 1)
+            if (cbSql.Checked)
             {
-                korisnickoIme = tbKorisnickoIme.Text;
-                selectDB(korisnickoIme);
-                provjeraLozinke();
+
+            }
+            else
+            {
+                if (provjeriPolja() == 1)
+                {
+                    korisnickoIme = tbKorisnickoIme.Text;
+                    selectDB(korisnickoIme);
+                    provjeraLozinke();
+                }
             }
         }
     }

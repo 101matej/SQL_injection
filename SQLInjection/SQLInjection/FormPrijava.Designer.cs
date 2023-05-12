@@ -38,6 +38,7 @@
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
             this.tbPrijavljeniKorisnik = new System.Windows.Forms.TextBox();
             this.lbPrijavljeniKorisnik = new System.Windows.Forms.Label();
+            this.cbSql = new System.Windows.Forms.CheckBox();
             this.gbPrijava.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +91,7 @@
             this.btnPrijaviSe.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnPrijaviSe.Location = new System.Drawing.Point(249, 365);
             this.btnPrijaviSe.Name = "btnPrijaviSe";
-            this.btnPrijaviSe.Size = new System.Drawing.Size(322, 107);
+            this.btnPrijaviSe.Size = new System.Drawing.Size(362, 107);
             this.btnPrijaviSe.TabIndex = 4;
             this.btnPrijaviSe.Text = "Prijavi se";
             this.btnPrijaviSe.UseVisualStyleBackColor = false;
@@ -143,12 +144,24 @@
             this.lbPrijavljeniKorisnik.TabIndex = 8;
             this.lbPrijavljeniKorisnik.Text = "Prijavljeni korisnik:";
             // 
+            // cbSql
+            // 
+            this.cbSql.AutoSize = true;
+            this.cbSql.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cbSql.Location = new System.Drawing.Point(736, 506);
+            this.cbSql.Name = "cbSql";
+            this.cbSql.Size = new System.Drawing.Size(391, 33);
+            this.cbSql.TabIndex = 10;
+            this.cbSql.Text = "SQL Injection prevencija (DA/NE)";
+            this.cbSql.UseVisualStyleBackColor = true;
+            // 
             // FormPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(995, 873);
+            this.Controls.Add(this.cbSql);
             this.Controls.Add(this.lbPrijavljeniKorisnik);
             this.Controls.Add(this.tbPrijavljeniKorisnik);
             this.Controls.Add(this.dgvKorisnici);
@@ -178,5 +191,6 @@
         private System.Windows.Forms.DataGridView dgvKorisnici;
         private System.Windows.Forms.TextBox tbPrijavljeniKorisnik;
         private System.Windows.Forms.Label lbPrijavljeniKorisnik;
+        private System.Windows.Forms.CheckBox cbSql;
     }
 }
