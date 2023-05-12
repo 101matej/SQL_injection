@@ -36,6 +36,8 @@
             this.btnPrijaviSe = new System.Windows.Forms.Button();
             this.gbPrijava = new System.Windows.Forms.GroupBox();
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
+            this.tbPrijavljeniKorisnik = new System.Windows.Forms.TextBox();
+            this.lbPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.gbPrijava.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
@@ -122,12 +124,33 @@
             this.dgvKorisnici.Size = new System.Drawing.Size(240, 150);
             this.dgvKorisnici.TabIndex = 6;
             // 
+            // tbPrijavljeniKorisnik
+            // 
+            this.tbPrijavljeniKorisnik.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbPrijavljeniKorisnik.Location = new System.Drawing.Point(350, 797);
+            this.tbPrijavljeniKorisnik.Multiline = true;
+            this.tbPrijavljeniKorisnik.Name = "tbPrijavljeniKorisnik";
+            this.tbPrijavljeniKorisnik.Size = new System.Drawing.Size(324, 44);
+            this.tbPrijavljeniKorisnik.TabIndex = 7;
+            // 
+            // lbPrijavljeniKorisnik
+            // 
+            this.lbPrijavljeniKorisnik.AutoSize = true;
+            this.lbPrijavljeniKorisnik.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbPrijavljeniKorisnik.Location = new System.Drawing.Point(62, 812);
+            this.lbPrijavljeniKorisnik.Name = "lbPrijavljeniKorisnik";
+            this.lbPrijavljeniKorisnik.Size = new System.Drawing.Size(213, 29);
+            this.lbPrijavljeniKorisnik.TabIndex = 8;
+            this.lbPrijavljeniKorisnik.Text = "Prijavljeni korisnik:";
+            // 
             // FormPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(995, 621);
+            this.ClientSize = new System.Drawing.Size(995, 873);
+            this.Controls.Add(this.lbPrijavljeniKorisnik);
+            this.Controls.Add(this.tbPrijavljeniKorisnik);
             this.Controls.Add(this.dgvKorisnici);
             this.Controls.Add(this.gbPrijava);
             this.Controls.Add(this.btnPrijaviSe);
@@ -153,5 +176,7 @@
         private System.Windows.Forms.Button btnPrijaviSe;
         private System.Windows.Forms.GroupBox gbPrijava;
         private System.Windows.Forms.DataGridView dgvKorisnici;
+        private System.Windows.Forms.TextBox tbPrijavljeniKorisnik;
+        private System.Windows.Forms.Label lbPrijavljeniKorisnik;
     }
 }

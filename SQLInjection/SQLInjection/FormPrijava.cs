@@ -125,6 +125,8 @@ namespace SQLInjection
         {
             tbKorisnickoIme.Clear();
             tbLozinka.Clear();
+            tbPrijavljeniKorisnik.Clear();
+            tbPrijavljeniKorisnik.BackColor = Color.Empty;
         }
 
         private int provjeriPolja()
@@ -137,14 +139,18 @@ namespace SQLInjection
             return 1;
         }
 
-        private void provjeraLozinke()
+        private async void provjeraLozinke()
         {
             lozinka = tbLozinka.Text;
             lozinka = lozinka + sol;
 
             if (hashiranaLozinka == hashirajLozinku(lozinka))
             {
+                ocistiPolja();
+                tbPrijavljeniKorisnik.Text = korisnickoIme;
+                tbPrijavljeniKorisnik.BackColor = Color.LightGreen;
                 MessageBox.Show("Uspješna prijava!");
+                await Task.Delay(3000);
                 ocistiPolja();
             }
             else
