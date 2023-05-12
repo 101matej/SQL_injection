@@ -26,7 +26,6 @@ C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\bin\Debu
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debug\SQLInjection.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debug\SQLInjection.csproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debug\SQLInjection.FormIzbornik.resources
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debug\SQLInjection.FormPrijava.resources
