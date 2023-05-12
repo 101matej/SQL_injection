@@ -110,6 +110,25 @@ namespace SQLInjection
             sqlConn.Close();
         }
 
+        private void selectDBSqlInjectionObrana(string korisnickoIme)
+        {
+            sqlConn.Open();
+            hashiranaLozinka = "";
+            sol = "";
+            string sqlUpit = "SELECT * FROM korisnik WHERE korisnicko_ime = @korisnickoIme";
+            MySqlCommand mySqlCmd = new MySqlCommand(sqlUpit, sqlConn);
+            mySqlCmd.Parameters.AddWithValue("@korisnickoIme", korisnickoIme);
+            MySqlDataReader mySqlDataReader = mySqlCmd.ExecuteReader();
+
+            while (mySqlDataReader.Read())
+            {
+                hashiranaLozinka = mySqlDataReader["hashirana_lozinka"].ToString();
+                sol = mySqlDataReader["salt"].ToString();
+            }
+            sqlConn.Close();
+        }
+
+
         private string hashirajLozinku(string posoljenaLozinka)
         {
             using (SHA256 sha256Hash = SHA256.Create())
@@ -167,7 +186,12 @@ namespace SQLInjection
         {
             if (cbSql.Checked)
             {
-
+                if (provjeriPolja() == 1)
+                {
+                    korisnickoIme = tbKorisnickoIme.Text;
+                    selectDBSqlInjectionObrana(korisnickoIme);
+                    provjeraLozinke();
+                }
             }
             else
             {
