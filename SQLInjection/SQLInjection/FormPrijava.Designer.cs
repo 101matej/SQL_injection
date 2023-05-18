@@ -39,6 +39,7 @@
             this.tbPrijavljeniKorisnik = new System.Windows.Forms.TextBox();
             this.lbPrijavljeniKorisnik = new System.Windows.Forms.Label();
             this.cbSql = new System.Windows.Forms.CheckBox();
+            this.rtbHint = new System.Windows.Forms.RichTextBox();
             this.gbPrijava.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +75,8 @@
             this.tbKorisnickoIme.Name = "tbKorisnickoIme";
             this.tbKorisnickoIme.Size = new System.Drawing.Size(324, 44);
             this.tbKorisnickoIme.TabIndex = 2;
+            this.tbKorisnickoIme.MouseEnter += new System.EventHandler(this.tbKorisnickoIme_MouseEnter);
+            this.tbKorisnickoIme.MouseLeave += new System.EventHandler(this.tbKorisnickoIme_MouseLeave);
             // 
             // tbLozinka
             // 
@@ -155,12 +158,22 @@
             this.cbSql.Text = "SQL Injection prevencija (DA/NE)";
             this.cbSql.UseVisualStyleBackColor = true;
             // 
+            // rtbHint
+            // 
+            this.rtbHint.Location = new System.Drawing.Point(847, 404);
+            this.rtbHint.Name = "rtbHint";
+            this.rtbHint.Size = new System.Drawing.Size(376, 59);
+            this.rtbHint.TabIndex = 11;
+            this.rtbHint.Text = "Testiranje SQL injection napada:\nKorisničko ime: \' OR \'1\'=\'1\' --\'\nLozinka: bilo k" +
+    "oja iz baze podataka registriranih korisnika";
+            // 
             // FormPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(995, 873);
+            this.Controls.Add(this.rtbHint);
             this.Controls.Add(this.cbSql);
             this.Controls.Add(this.lbPrijavljeniKorisnik);
             this.Controls.Add(this.tbPrijavljeniKorisnik);
@@ -192,5 +205,6 @@
         private System.Windows.Forms.TextBox tbPrijavljeniKorisnik;
         private System.Windows.Forms.Label lbPrijavljeniKorisnik;
         private System.Windows.Forms.CheckBox cbSql;
+        private System.Windows.Forms.RichTextBox rtbHint;
     }
 }

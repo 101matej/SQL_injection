@@ -36,3 +36,4 @@ C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debu
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debug\SQLInjection.csproj.CopyComplete
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debug\SQLInjection.exe
 C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debug\SQLInjection.pdb
+C:\Users\Admin\Documents\GitHub\SQL_injection\SQLInjection\SQLInjection\obj\Debug\SQLInjection.csproj.AssemblyReference.cache

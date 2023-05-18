@@ -29,6 +29,7 @@ namespace SQLInjection
             dgvKorisnici.AutoSize = true;
             prikaziKorisnike();
             tbLozinka.PasswordChar = '*';
+            rtbHint.Hide();
         }
 
         private void pozicioniraj()
@@ -202,6 +203,16 @@ namespace SQLInjection
                     provjeraLozinke();
                 }
             }
+        }
+
+        private void tbKorisnickoIme_MouseEnter(object sender, EventArgs e)
+        {
+            rtbHint.Show();
+        }
+
+        private void tbKorisnickoIme_MouseLeave(object sender, EventArgs e)
+        {
+            rtbHint.Hide();
         }
     }
 }
